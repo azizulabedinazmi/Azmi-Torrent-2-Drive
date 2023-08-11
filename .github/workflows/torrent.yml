@@ -23,4 +23,4 @@ jobs:
       run: cd /data && ls -la
     
     - name: Upload to Drive
-      run: node /app/upload.
+      run: node /app/upload.js
