@@ -10,7 +10,6 @@ jobs:
   runs-on: ubuntu-latest
   container: azizulabedinazmi/torrent-downloader:latest
   steps:
-  
     - name: Write .env File
     run: 
         echo '${{ secrets.DOTENV }}' >> .env
