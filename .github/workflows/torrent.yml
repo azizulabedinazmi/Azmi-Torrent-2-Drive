@@ -12,7 +12,7 @@ jobs:
     steps:
   
     - name: Write .env File
-      run:  
+      run: 
         echo '${{ secrets.DOTENV }}' >> .env
 
         
