@@ -8,18 +8,19 @@ on:
 jobs:
   download:
   runs-on: ubuntu-latest
-  container: azizulabedinazmi/torrent-downloader:latest
+  container: subekti13/torrent-downloader:latest
   steps:
+  
     - name: Write .env File
-    run: 
+    run:
         echo '${{ secrets.DOTENV }}' >> .env
 
         
     - name: Dowload File
     run: node /app/download.js ${{ github.event.inputs.url }}
 
-    - name: LS
+    -name: LS
     run: cd /data && ls -la
     
-    - name: Upload to Drive
+    -name: Upload to Drive
     run: node /app/upload.js
